@@ -43,6 +43,21 @@
 
 ***Ответ:***
 
+>Выполните `terraform init`
+
+![alt](https://i.ibb.co/GnnG4vK/Screenshot-1.jpg)
+
+>Создайте два воркспейса stage и prod.
+>
+```
+terraform workspace new stage
+terraform workspace new prod
+terraform workspace list
+```
+
+![alt](https://i.ibb.co/cCxdJmP/Screenshot-2.jpg)
+
+
 Файл `s3.tf`
 
 ```
@@ -58,18 +73,6 @@ provider "aws" {
           }
         }
 ```
-
-![alt](https://i.ibb.co/GnnG4vK/Screenshot-1.jpg)
-
->Создайте два воркспейса stage и prod.
->
-```
-terraform workspace new stage
-terraform workspace new prod
-terraform workspace list
-```
-
-![alt](https://i.ibb.co/cCxdJmP/Screenshot-2.jpg)
 
 terraform plan для `prod`
 
